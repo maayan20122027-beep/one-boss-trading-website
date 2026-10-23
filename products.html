@@ -7,15 +7,18 @@
     <title>Products | ONE BOSS TRADING LLC</title>
 
     <meta name="description"
-          content="Explore phone, tablet, computer and accessory categories at ONE BOSS TRADING LLC in Dubai. Contact us for wholesale and individual enquiries.">
+          content="Explore electronics categories at ONE BOSS TRADING LLC, Dubai. Contact us for wholesale, bulk, individual and mixed-grade enquiries.">
+
+    <meta name="theme-color" content="#090909">
 
     <style>
         :root {
             --black: #090909;
             --card: #151515;
             --gold: #d4af37;
+            --gold-light: #f2d779;
             --white: #ffffff;
-            --muted: #b9b9b9;
+            --muted: #bdbdbd;
             --border: rgba(212, 175, 55, 0.35);
         }
 
@@ -27,13 +30,14 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 110px;
         }
 
         body {
             background: var(--black);
             color: var(--white);
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         a {
@@ -41,52 +45,70 @@
             text-decoration: none;
         }
 
+        img {
+            max-width: 100%;
+        }
+
         .container {
-            width: min(1150px, 90%);
+            width: min(1160px, 91%);
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* HEADER AND COMPANY LOGO */
 
         header {
-            background: rgba(9, 9, 9, 0.97);
-            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
+            background: rgba(9, 9, 9, 0.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
         }
 
         nav {
-            min-height: 82px;
+            min-height: 88px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            gap: 25px;
         }
 
         .brand {
-            color: var(--gold);
-            font-size: 1.15rem;
-            font-weight: 800;
-            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            flex-shrink: 0;
         }
 
-        .brand span {
+        .brand img {
+            width: 67px;
+            height: 67px;
+            object-fit: contain;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: var(--gold);
+            font-size: 1.05rem;
+            letter-spacing: 1.2px;
+        }
+
+        .brand-text span {
             display: block;
             color: var(--white);
-            font-size: 0.68rem;
+            font-size: 0.69rem;
             letter-spacing: 3px;
         }
 
         .nav-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
             align-items: center;
+            gap: 24px;
         }
 
         .nav-links a {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             transition: color 0.2s;
         }
 
@@ -95,15 +117,15 @@
             color: var(--gold);
         }
 
-        /* PAGE INTRODUCTION */
+        /* HERO */
 
-        .page-hero {
+        .hero {
+            padding: 88px 0 65px;
             text-align: center;
-            padding: 85px 0 55px;
             background:
                 radial-gradient(
-                    ellipse at top,
-                    rgba(212, 175, 55, 0.13),
+                    ellipse at 50% 0%,
+                    rgba(212, 175, 55, 0.15),
                     transparent 65%
                 );
         }
@@ -111,37 +133,49 @@
         .eyebrow {
             color: var(--gold);
             font-size: 0.8rem;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         h1 {
-            font-size: clamp(2.3rem, 5vw, 4rem);
-            line-height: 1.15;
-            margin-bottom: 20px;
+            font-size: clamp(2.4rem, 6vw, 4.4rem);
+            line-height: 1.13;
+            margin-bottom: 23px;
         }
 
-        h1 span {
+        h1 span,
+        .section-heading h2 span,
+        .contact-banner h2 span {
             color: var(--gold);
         }
 
-        .page-hero p {
-            max-width: 700px;
+        .hero p {
+            max-width: 720px;
             margin: auto;
             color: var(--muted);
             font-size: 1.05rem;
         }
 
-        /* CATEGORY NAVIGATION */
+        .hero-note {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            color: var(--gold-light);
+            font-size: 0.82rem;
+        }
+
+        /* CATEGORY LINKS */
 
         .category-nav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 12px;
-            padding-bottom: 55px;
+            padding: 0 0 65px;
         }
 
         .category-nav a {
@@ -157,26 +191,23 @@
             color: var(--black);
         }
 
-        /* PRODUCT SECTIONS */
+        /* SECTIONS */
 
         .product-section {
-            padding: 25px 0 65px;
-            scroll-margin-top: 100px;
+            padding-bottom: 75px;
+            scroll-margin-top: 115px;
         }
 
         .section-heading {
-            margin-bottom: 27px;
-            padding-bottom: 17px;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
             border-bottom: 1px solid var(--border);
         }
 
         .section-heading h2 {
-            font-size: clamp(1.7rem, 4vw, 2.3rem);
-            margin-bottom: 7px;
-        }
-
-        .section-heading h2 span {
-            color: var(--gold);
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            line-height: 1.3;
+            margin-bottom: 8px;
         }
 
         .section-heading p {
@@ -184,20 +215,22 @@
             font-size: 0.95rem;
         }
 
+        /* PRODUCT CARDS */
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 20px;
+            gap: 21px;
         }
 
         .product-card {
+            min-width: 0;
             display: flex;
             flex-direction: column;
+            padding: 19px;
             background: var(--card);
             border: 1px solid rgba(255, 255, 255, 0.09);
-            border-radius: 14px;
-            padding: 22px 18px;
-            min-width: 0;
+            border-radius: 13px;
             transition:
                 transform 0.25s,
                 border-color 0.25s,
@@ -207,24 +240,27 @@
         .product-card:hover {
             transform: translateY(-5px);
             border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
         }
+
+        /* BRAND LOGO BOX */
 
         .logo-box {
             height: 125px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 18px;
+            align-items: center;
+            padding: 16px;
             margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 9px;
+            overflow: hidden;
         }
 
         .logo-box img {
             display: block;
             max-width: 100%;
-            max-height: 85px;
+            max-height: 88px;
             width: auto;
             height: auto;
             object-fit: contain;
@@ -232,129 +268,212 @@
 
         .logo-fallback {
             display: none;
-            color: #111111;
-            text-align: center;
-            font-size: 1.35rem;
+            color: #151515;
             font-weight: 800;
+            font-size: 1.35rem;
+            text-align: center;
             overflow-wrap: anywhere;
         }
 
+        /* REAL ACCESSORY PHOTOGRAPHS */
+
+        .accessory-photo {
+            width: 100%;
+            height: 165px;
+            display: block;
+            object-fit: contain;
+            background: #ffffff;
+            border-radius: 9px;
+            margin-bottom: 20px;
+        }
+
+        .photo-fallback {
+            display: none;
+            width: 100%;
+            height: 165px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            color: #222222;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
         .product-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
+            line-height: 1.4;
             margin-bottom: 9px;
         }
 
-        .product-card .description {
+        .description {
             color: var(--muted);
-            font-size: 0.9rem;
+            font-size: 0.89rem;
             margin-bottom: 15px;
             flex-grow: 1;
         }
 
         .availability {
-            font-size: 0.78rem;
-            color: var(--gold);
+            color: var(--gold-light);
+            font-size: 0.77rem;
             margin-bottom: 17px;
         }
 
         .enquire-btn {
             display: block;
+            width: 100%;
+            padding: 12px 8px;
             text-align: center;
             background: var(--gold);
-            color: #101010;
+            color: #111111;
             font-weight: 800;
-            font-size: 0.85rem;
-            padding: 12px 10px;
+            font-size: 0.82rem;
             border-radius: 6px;
-            transition: 0.2s;
+            transition: background 0.2s;
         }
 
         .enquire-btn:hover {
-            background: #f0d778;
-            transform: translateY(-1px);
+            background: var(--gold-light);
         }
 
         /* CONTACT BANNER */
 
         .contact-banner {
-            margin: 10px auto 75px;
-            padding: 40px 25px;
+            padding: 43px 25px;
+            margin-bottom: 75px;
             text-align: center;
-            background: linear-gradient(
-                135deg,
-                #1c1c1c,
-                #111111
-            );
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    rgba(212, 175, 55, 0.11),
+                    transparent 75%
+                ),
+                #141414;
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 15px;
         }
 
         .contact-banner h2 {
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-size: clamp(1.7rem, 4vw, 2.5rem);
             margin-bottom: 12px;
         }
 
-        .contact-banner h2 span {
-            color: var(--gold);
-        }
-
         .contact-banner p {
+            max-width: 680px;
+            margin: 0 auto 25px;
             color: var(--muted);
-            margin: 0 auto 23px;
-            max-width: 650px;
         }
 
         .primary-btn {
             display: inline-block;
+            padding: 14px 24px;
             background: var(--gold);
-            color: var(--black);
-            font-weight: bold;
-            padding: 13px 23px;
+            color: #111111;
             border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        .primary-btn:hover {
+            background: var(--gold-light);
         }
 
         /* FOOTER */
 
         footer {
+            padding: 32px 0;
             border-top: 1px solid var(--border);
-            padding: 30px 0;
             color: var(--muted);
-            font-size: 0.85rem;
+            font-size: 0.84rem;
         }
 
-        .footer-content {
+        .footer-main {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 25px;
             flex-wrap: wrap;
-            gap: 15px;
         }
 
-        .footer-content a:hover {
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .footer-brand img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .footer-brand strong {
+            display: block;
             color: var(--gold);
         }
 
-        /* RESPONSIVE DESIGN */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
 
-        @media (max-width: 900px) {
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+        }
+
+        /* TABLETS AND MOBILE */
+
+        @media (max-width: 950px) {
             .product-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
+
+            nav {
+                padding: 13px 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 600px) {
             nav {
-                padding: 17px 0;
                 flex-direction: column;
+                gap: 15px;
+                padding: 15px 0;
+            }
+
+            .brand img {
+                width: 58px;
+                height: 58px;
             }
 
             .nav-links {
                 justify-content: center;
-                gap: 16px;
+                gap: 13px;
             }
 
-            .page-hero {
-                padding-top: 60px;
+            .nav-links a {
+                font-size: 0.83rem;
+            }
+
+            .hero {
+                padding: 60px 0 45px;
+            }
+
+            .category-nav {
+                padding-bottom: 48px;
             }
 
             .product-grid {
@@ -362,12 +481,25 @@
             }
 
             .product-card {
-                padding: 22px;
+                padding: 20px;
             }
 
-            .footer-content {
+            .logo-box {
+                height: 140px;
+            }
+
+            .accessory-photo,
+            .photo-fallback {
+                height: 200px;
+            }
+
+            .footer-main {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
             }
         }
     </style>
@@ -375,40 +507,54 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- HEADER -->
 
 <header>
     <nav class="container">
-        <a class="brand" href="index.html">
-            ONE BOSS
-            <span>TRADING LLC</span>
+
+        <a class="brand" href="index.html" aria-label="ONE BOSS TRADING LLC Home">
+            <img src="logo.png" alt="ONE BOSS TRADING LLC logo">
+
+            <span class="brand-text">
+                <strong>ONE BOSS</strong>
+                <span>TRADING LLC</span>
+            </span>
         </a>
 
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="products.html" class="active">Products</a>
             <a href="#phones">Phones</a>
+            <a href="#tablets">Tablets</a>
             <a href="#computers">Computers</a>
-            <a href="#contact">Contact</a>
+            <a href="#accessories">Accessories</a>
         </div>
+
     </nav>
 </header>
 
 <main>
 
-    <!-- PAGE INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
-    <section class="page-hero">
+    <section class="hero">
         <div class="container">
+
             <div class="eyebrow">ONE BOSS TRADING LLC · DUBAI</div>
 
             <h1>Explore Our <span>Products</span></h1>
 
             <p>
-                Explore our electronics categories for wholesale, bulk,
-                individual and mixed-grade enquiries. Contact our team
-                to discuss your requirements and current availability.
+                Discover electronics categories for wholesale, bulk,
+                individual and mixed-grade enquiries. Tell us what
+                you need, and contact our team to discuss sourcing
+                options and current availability.
             </p>
+
+            <div class="hero-note">
+                Product availability is subject to current stock.
+            </div>
+
         </div>
     </section>
 
@@ -416,109 +562,74 @@
 
     <div class="container">
         <div class="category-nav">
-            <a href="#phones">📱 Phones</a>
-            <a href="#tablets">📲 Tablets</a>
-            <a href="#computers">💻 Computers</a>
-            <a href="#accessories">🔌 Accessories</a>
+            <a href="#phones">Phones</a>
+            <a href="#tablets">Tablets</a>
+            <a href="#computers">Computers</a>
+            <a href="#accessories">Accessories</a>
         </div>
     </div>
 
     <!-- PHONES -->
 
     <section class="product-section container" id="phones">
+
         <div class="section-heading">
             <h2>Trending <span>Phones</span></h2>
-            <p>Explore popular smartphone brands for your enquiry.</p>
+            <p>Explore smartphone brands for your requirements.</p>
         </div>
 
         <div class="product-grid">
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/apple/000000"
-                        alt="Apple logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/apple/000000"
+                         alt="Apple logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">APPLE</div>
                 </div>
                 <h3>Apple Phones</h3>
-                <p class="description">
-                    Enquire about iPhone models and your preferred quantities.
-                </p>
-                <p class="availability">
-                    Availability subject to current stock.
-                </p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20phones."
-                   target="_blank" rel="noopener noreferrer">
-                    ENQUIRE NOW
-                </a>
+                <p class="description">Enquire about iPhone models and preferred quantities.</p>
+                <p class="availability">Availability subject to current stock.</p>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20phones." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/samsung/1428A0"
-                        alt="Samsung logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/samsung/1428A0"
+                         alt="Samsung logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">SAMSUNG</div>
                 </div>
                 <h3>Samsung Phones</h3>
-                <p class="description">
-                    Enquire about Samsung smartphone ranges and quantities.
-                </p>
-                <p class="availability">
-                    Availability subject to current stock.
-                </p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Samsung%20phones."
-                   target="_blank" rel="noopener noreferrer">
-                    ENQUIRE NOW
-                </a>
+                <p class="description">Ask about Samsung smartphone options and quantities.</p>
+                <p class="availability">Availability subject to current stock.</p>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Samsung%20phones." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/google/4285F4"
-                        alt="Google logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/google/4285F4"
+                         alt="Google logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">GOOGLE</div>
                 </div>
                 <h3>Google Phones</h3>
-                <p class="description">
-                    Ask about Google Pixel phones and your sourcing needs.
-                </p>
-                <p class="availability">
-                    Availability subject to current stock.
-                </p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Google%20phones."
-                   target="_blank" rel="noopener noreferrer">
-                    ENQUIRE NOW
-                </a>
+                <p class="description">Enquire about Google Pixel phones and sourcing.</p>
+                <p class="availability">Availability subject to current stock.</p>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Google%20phones." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/motorola/000000"
-                        alt="Motorola logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/motorola/000000"
+                         alt="Motorola logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">MOTOROLA</div>
                 </div>
                 <h3>Motorola Phones</h3>
-                <p class="description">
-                    Contact us about Motorola smartphone options.
-                </p>
-                <p class="availability">
-                    Availability subject to current stock.
-                </p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Motorola%20phones."
-                   target="_blank" rel="noopener noreferrer">
-                    ENQUIRE NOW
-                </a>
+                <p class="description">Contact us about Motorola smartphone options.</p>
+                <p class="availability">Availability subject to current stock.</p>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Motorola%20phones." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
         </div>
@@ -527,83 +638,64 @@
     <!-- TABLETS -->
 
     <section class="product-section container" id="tablets">
+
         <div class="section-heading">
             <h2>Trending <span>Tablets</span></h2>
-            <p>Browse tablet brands for personal or business requirements.</p>
+            <p>Explore tablet categories for work, business and everyday use.</p>
         </div>
 
         <div class="product-grid">
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/apple/000000"
-                        alt="Apple logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/apple/000000"
+                         alt="Apple logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">APPLE</div>
                 </div>
                 <h3>Apple iPads</h3>
-                <p class="description">
-                    Enquire about iPads and your preferred configurations.
-                </p>
+                <p class="description">Enquire about iPads and preferred configurations.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20iPads."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20iPads." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/samsung/1428A0"
-                        alt="Samsung logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/samsung/1428A0"
+                         alt="Samsung logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">SAMSUNG</div>
                 </div>
                 <h3>Samsung Tablets</h3>
-                <p class="description">
-                    Ask about Samsung Galaxy tablet options.
-                </p>
+                <p class="description">Ask about Samsung Galaxy tablet options.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Samsung%20tablets."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Samsung%20tablets." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/lenovo/E2231A"
-                        alt="Lenovo logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A"
+                         alt="Lenovo logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">LENOVO</div>
                 </div>
                 <h3>Lenovo Tablets</h3>
-                <p class="description">
-                    Enquire about Lenovo tablets for work or everyday use.
-                </p>
+                <p class="description">Enquire about Lenovo tablet options.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Lenovo%20tablets."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Lenovo%20tablets." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/xiaomi/FF6900"
-                        alt="Xiaomi logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/xiaomi/FF6900"
+                         alt="Xiaomi logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">XIAOMI</div>
                 </div>
                 <h3>Xiaomi Tablets</h3>
-                <p class="description">
-                    Contact us about Xiaomi tablet availability.
-                </p>
+                <p class="description">Contact us about Xiaomi tablet availability.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Xiaomi%20tablets."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Xiaomi%20tablets." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
         </div>
@@ -612,167 +704,223 @@
     <!-- COMPUTERS -->
 
     <section class="product-section container" id="computers">
+
         <div class="section-heading">
             <h2>Trending <span>Computers</span></h2>
-            <p>Enquire about laptops and computers for business or personal use.</p>
+            <p>Enquire about laptops and computers for personal or business use.</p>
         </div>
 
         <div class="product-grid">
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/dell/007DB8"
-                        alt="Dell logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/dell/007DB8"
+                         alt="Dell logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">DELL</div>
                 </div>
                 <h3>Dell Computers</h3>
-                <p class="description">
-                    Ask about Dell laptops and computer options.
-                </p>
+                <p class="description">Ask about Dell laptops and computer options.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Dell%20computers."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Dell%20computers." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/hp/0096D6"
-                        alt="HP logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/hp/0096D6"
+                         alt="HP logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">HP</div>
                 </div>
                 <h3>HP Computers</h3>
-                <p class="description">
-                    Enquire about HP laptops and business computers.
-                </p>
+                <p class="description">Enquire about HP laptops and business computers.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20HP%20computers."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20HP%20computers." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/lenovo/E2231A"
-                        alt="Lenovo logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/lenovo/E2231A"
+                         alt="Lenovo logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">LENOVO</div>
                 </div>
                 <h3>Lenovo Computers</h3>
-                <p class="description">
-                    Ask about Lenovo laptops and computing solutions.
-                </p>
+                <p class="description">Ask about Lenovo laptops and computing solutions.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Lenovo%20computers."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Lenovo%20computers." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
             <article class="product-card">
                 <div class="logo-box">
-                    <img
-                        src="https://cdn.simpleicons.org/apple/000000"
-                        alt="Apple logo"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <img src="https://cdn.simpleicons.org/apple/000000"
+                         alt="Apple logo"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <div class="logo-fallback">APPLE</div>
                 </div>
                 <h3>Apple MacBooks</h3>
-                <p class="description">
-                    Enquire about MacBook models and configurations.
-                </p>
+                <p class="description">Enquire about MacBook models and configurations.</p>
                 <p class="availability">Availability subject to current stock.</p>
-                <a class="enquire-btn"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20MacBooks."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                <a class="enquire-btn" href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20Apple%20MacBooks." target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
             </article>
 
         </div>
     </section>
 
-    <!-- ACCESSORIES -->
+    <!-- ACCESSORIES WITH PHOTOGRAPHS -->
 
     <section class="product-section container" id="accessories">
+
         <div class="section-heading">
             <h2>Electronics <span>Accessories</span></h2>
-            <p>Enquire about accessories for devices, offices and businesses.</p>
+            <p>Explore accessory categories for devices, offices and businesses.</p>
         </div>
 
         <div class="product-grid">
 
+            <!-- DOCKING STATIONS -->
+
             <article class="product-card">
-                <div class="logo-box">
-                    <span style="font-size:3.5rem;" role="img" aria-label="Docking station">🖥️</span>
-                </div>
+
+                <img
+                    class="accessory-photo"
+                    src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=700&q=85"
+                    alt="USB-C docking station and connectivity hub"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                <div class="photo-fallback">Docking Stations</div>
+
                 <h3>Docking Stations</h3>
+
                 <p class="description">
-                    Enquire about docks, hubs and connectivity accessories.
+                    Enquire about docking stations, USB hubs and
+                    computer connectivity accessories.
                 </p>
-                <p class="availability">Availability subject to current stock.</p>
+
+                <p class="availability">
+                    Availability subject to current stock.
+                </p>
+
                 <a class="enquire-btn"
                    href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20docking%20stations."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                   target="_blank" rel="noopener noreferrer">
+                    ENQUIRE NOW
+                </a>
+
             </article>
 
+            <!-- CABLES -->
+
             <article class="product-card">
-                <div class="logo-box">
-                    <span style="font-size:3.5rem;" role="img" aria-label="Cables">🔌</span>
-                </div>
+
+                <img
+                    class="accessory-photo"
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=85"
+                    alt="Electronic cables and connectivity accessories"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                <div class="photo-fallback">Cables &amp; Wires</div>
+
                 <h3>Cables &amp; Wires</h3>
+
                 <p class="description">
-                    Ask about charging, data and connectivity cables.
+                    Ask about charging cables, data cables and
+                    connectivity accessories.
                 </p>
-                <p class="availability">Availability subject to current stock.</p>
+
+                <p class="availability">
+                    Availability subject to current stock.
+                </p>
+
                 <a class="enquire-btn"
                    href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20cables%20and%20wires."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                   target="_blank" rel="noopener noreferrer">
+                    ENQUIRE NOW
+                </a>
+
             </article>
 
+            <!-- CASES -->
+
             <article class="product-card">
-                <div class="logo-box">
-                    <span style="font-size:3.5rem;" role="img" aria-label="Protective cases">📱</span>
-                </div>
+
+                <img
+                    class="accessory-photo"
+                    src="https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=700&q=85"
+                    alt="Mobile device accessories"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                <div class="photo-fallback">Cases &amp; Covers</div>
+
                 <h3>Cases &amp; Covers</h3>
+
                 <p class="description">
-                    Enquire about protective cases and device covers.
+                    Enquire about protective cases and covers
+                    for mobile devices and tablets.
                 </p>
-                <p class="availability">Availability subject to current stock.</p>
+
+                <p class="availability">
+                    Availability subject to current stock.
+                </p>
+
                 <a class="enquire-btn"
                    href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20cases%20and%20covers."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                   target="_blank" rel="noopener noreferrer">
+                    ENQUIRE NOW
+                </a>
+
             </article>
 
+            <!-- CHARGERS -->
+
             <article class="product-card">
-                <div class="logo-box">
-                    <span style="font-size:3.5rem;" role="img" aria-label="Chargers">🔋</span>
-                </div>
+
+                <img
+                    class="accessory-photo"
+                    src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85"
+                    alt="Charging equipment and electronic accessories"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+                <div class="photo-fallback">Chargers &amp; Adapters</div>
+
                 <h3>Chargers &amp; Adapters</h3>
+
                 <p class="description">
-                    Ask about chargers, power adapters and related accessories.
+                    Ask about chargers, power adapters and
+                    compatible charging accessories.
                 </p>
-                <p class="availability">Availability subject to current stock.</p>
+
+                <p class="availability">
+                    Availability subject to current stock.
+                </p>
+
                 <a class="enquire-btn"
                    href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20chargers%20and%20adapters."
-                   target="_blank" rel="noopener noreferrer">ENQUIRE NOW</a>
+                   target="_blank" rel="noopener noreferrer">
+                    ENQUIRE NOW
+                </a>
+
             </article>
 
         </div>
     </section>
 
-    <!-- GENERAL ENQUIRIES -->
+    <!-- CONTACT -->
 
     <section class="container" id="contact">
+
         <div class="contact-banner">
-            <h2>Looking for something <span>specific?</span></h2>
+
+            <h2>Looking for Something <span>Specific?</span></h2>
 
             <p>
                 Tell us the brand, model, quantity and grade you need.
-                Our team can discuss sourcing options and current availability
-                with you.
+                Contact our team to discuss sourcing options and
+                current availability.
             </p>
 
             <a class="primary-btn"
@@ -780,7 +928,9 @@
                target="_blank" rel="noopener noreferrer">
                 CONTACT US ON WHATSAPP
             </a>
+
         </div>
+
     </section>
 
 </main>
@@ -788,19 +938,36 @@
 <!-- FOOTER -->
 
 <footer>
-    <div class="container footer-content">
-        <p>
+    <div class="container">
+
+        <div class="footer-main">
+
+            <a class="footer-brand" href="index.html">
+                <img src="logo.png" alt="ONE BOSS TRADING LLC logo">
+
+                <span>
+                    <strong>ONE BOSS TRADING LLC</strong>
+                    Electronics sourcing · Dubai, UAE
+                </span>
+            </a>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="mailto:onebossllc1981@gmail.com">Email Us</a>
+                <a href="https://wa.me/971522740627"
+                   target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
             &copy; <span id="year"></span> ONE BOSS TRADING LLC.
             All rights reserved.
-        </p>
+        </div>
 
-        <p>
-            <a href="index.html">Home</a>
-            &nbsp; | &nbsp;
-            <a href="#phones">Products</a>
-            &nbsp; | &nbsp;
-            <a href="mailto:onebossllc1981@gmail.com">Email Us</a>
-        </p>
     </div>
 </footer>
 
