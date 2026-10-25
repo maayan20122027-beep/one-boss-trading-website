@@ -6,7 +6,6 @@
     <meta name="theme-color" content="#090909">
     <meta name="description" content="Explore phones, tablets, computers and accessories available through ONE BOSS TRADING LLC in Dubai, UAE.">
     <title>Products | ONE BOSS TRADING LLC</title>
-
     <style>
         :root {
             --black: #090909;
@@ -96,11 +95,18 @@
             color: var(--gold);
         }
 
+        .site-logo {
+            width: clamp(220px, 22vw, 340px);
+            height: auto;
+            display: block;
+            margin-left: auto;
+            filter: drop-shadow(0 8px 18px rgba(212, 175, 55, 0.2));
+        }
+
         .hero {
             padding: 75px 0 60px;
             text-align: center;
-            background:
-                radial-gradient(ellipse at top, #292211 0%, #090909 65%);
+            background: radial-gradient(ellipse at top, #292211 0%, #090909 65%);
             border-bottom: 1px solid var(--border);
         }
 
@@ -364,10 +370,14 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .site-logo {
+                width: min(100%, 220px);
+                margin-left: 0;
+            }
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -376,6 +386,8 @@
             <strong>ONE BOSS</strong>
             <span>TRADING LLC</span>
         </a>
+
+        <img class="site-logo" src="assets/logo.svg" alt="ONE BOSS TRADING LLC logo">
 
         <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
@@ -392,8 +404,7 @@
             <span class="eyebrow">Quality • Value • Trust</span>
             <h1>Explore Our <span class="gold">Products</span></h1>
             <p>
-                Discover phones, tablets, computers and electronic accessories
-                sourced for wholesale, bulk and individual enquiries.
+                Discover phones, tablets, computers and electronic accessories sourced for wholesale, bulk and individual enquiries.
                 Contact our team to check availability and request a quotation.
             </p>
 
@@ -420,16 +431,12 @@
         </div>
     </section>
 
-    <!-- MOBILE PHONES -->
-
     <section class="products-section container" id="phones">
         <div class="section-heading">
             <h2>Mobile <span class="gold">Phones</span></h2>
             <p>Explore popular smartphone brands.</p>
         </div>
-
         <div class="product-grid">
-
             <article class="product-card">
                 <div class="product-visual" aria-hidden="true">
                     <svg viewBox="0 0 100 100">
@@ -501,20 +508,15 @@
                     </a>
                 </div>
             </article>
-
         </div>
     </section>
-
-    <!-- TABLETS -->
 
     <section class="products-section container" id="tablets">
         <div class="section-heading">
             <h2><span class="gold">Tablets</span></h2>
             <p>Tablet options for work, study and everyday use.</p>
         </div>
-
         <div class="product-grid">
-
             <article class="product-card">
                 <div class="product-visual" aria-hidden="true">
                     <svg viewBox="0 0 100 100">
@@ -582,20 +584,15 @@
                     </a>
                 </div>
             </article>
-
         </div>
     </section>
-
-    <!-- COMPUTERS -->
 
     <section class="products-section container" id="computers">
         <div class="section-heading">
             <h2>Computers &amp; <span class="gold">Laptops</span></h2>
             <p>Computer solutions for businesses and individual customers.</p>
         </div>
-
         <div class="product-grid">
-
             <article class="product-card">
                 <div class="product-visual" aria-hidden="true">
                     <svg viewBox="0 0 100 100">
@@ -670,20 +667,15 @@
                     </a>
                 </div>
             </article>
-
         </div>
     </section>
-
-    <!-- ACCESSORIES -->
 
     <section class="products-section container" id="accessories">
         <div class="section-heading">
             <h2>Electronic <span class="gold">Accessories</span></h2>
             <p>Useful accessories for devices, offices and business customers.</p>
         </div>
-
         <div class="product-grid">
-
             <article class="product-card">
                 <div class="product-visual" aria-hidden="true">
                     <svg viewBox="0 0 100 100">
@@ -759,7 +751,6 @@
                     </a>
                 </div>
             </article>
-
         </div>
     </section>
 

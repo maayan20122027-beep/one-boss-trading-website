@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="ONE BOSS TRADING LLC is a Dubai-based electronics trading company offering wholesale, bulk, individual and mixed-grade sourcing solutions.">
-
     <title>ONE BOSS TRADING LLC | Global Electronics Trading</title>
-
     <style>
         :root {
             --black: #090909;
@@ -45,8 +42,6 @@
             margin: auto;
         }
 
-        /* Announcement bar */
-
         .announcement {
             background: var(--gold);
             color: #111;
@@ -56,8 +51,6 @@
             font-weight: bold;
             letter-spacing: 1px;
         }
-
-        /* Navigation */
 
         header {
             background: rgba(9, 9, 9, 0.97);
@@ -108,7 +101,13 @@
             color: var(--gold);
         }
 
-        /* Hero section */
+        .site-logo {
+            width: clamp(220px, 24vw, 360px);
+            height: auto;
+            display: block;
+            margin-left: auto;
+            filter: drop-shadow(0 8px 18px rgba(212, 175, 55, 0.25));
+        }
 
         .hero {
             min-height: 590px;
@@ -192,8 +191,6 @@
             color: var(--gold);
         }
 
-        /* Trust strip */
-
         .trust-strip {
             border-top: 1px solid #292929;
             border-bottom: 1px solid #292929;
@@ -227,8 +224,6 @@
             font-size: 12px;
         }
 
-        /* General sections */
-
         section {
             padding: 95px 0;
         }
@@ -253,8 +248,6 @@
             font-size: 15px;
         }
 
-        /* About */
-
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -268,8 +261,7 @@
         }
 
         .about-panel {
-            background:
-                linear-gradient(145deg, #1d1d1d, #0e0e0e);
+            background: linear-gradient(145deg, #1d1d1d, #0e0e0e);
             border: 1px solid #343434;
             padding: 35px;
         }
@@ -299,8 +291,6 @@
             color: var(--gold);
             margin-right: 10px;
         }
-
-        /* Services */
 
         .services-section {
             background: #101010;
@@ -341,8 +331,6 @@
             font-size: 14px;
         }
 
-        /* Sourcing */
-
         .sourcing-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -367,11 +355,8 @@
             color: var(--muted);
         }
 
-        /* Call to action */
-
         .cta {
-            background:
-                linear-gradient(110deg, #17130a, #101010 75%);
+            background: linear-gradient(110deg, #17130a, #101010 75%);
             border-top: 1px solid #3d321b;
             border-bottom: 1px solid #3d321b;
             text-align: center;
@@ -395,8 +380,6 @@
         .cta .buttons {
             justify-content: center;
         }
-
-        /* Contact */
 
         .contact-grid {
             display: grid;
@@ -427,8 +410,6 @@
             color: var(--gold);
         }
 
-        /* Footer */
-
         footer {
             background: #050505;
             border-top: 1px solid #292929;
@@ -454,8 +435,6 @@
             color: #858585;
             font-size: 11px;
         }
-
-        /* Mobile responsive layout */
 
         @media (max-width: 760px) {
             nav {
@@ -516,6 +495,11 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .site-logo {
+                width: min(100%, 240px);
+                margin-left: 0;
+            }
         }
 
         @media (max-width: 450px) {
@@ -537,7 +521,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <div class="announcement">
@@ -551,6 +534,8 @@
                     ONE BOSS
                     <span>TRADING LLC</span>
                 </a>
+
+                <img class="site-logo" src="assets/logo.svg" alt="ONE BOSS TRADING LLC logo">
 
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -572,125 +557,47 @@
 
     <main>
 
-        <!-- HERO -->
-
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-
-                    <p class="eyebrow">
-                        Your Global Electronics Trading Partner
-                    </p>
-
-                    <h1>
-                        Global Sourcing.<br>
-                        <span>One Trusted Partner.</span>
-                    </h1>
-
+                    <p class="eyebrow">Your Global Electronics Trading Partner</p>
+                    <h1>Global Sourcing.<br><span>One Trusted Partner.</span></h1>
                     <p class="hero-description">
-                        ONE BOSS TRADING LLC connects businesses and
-                        customers with electronics sourcing solutions
-                        from international markets. Based in Dubai,
-                        we support wholesale, bulk, individual and
-                        mixed-grade enquiries.
+                        ONE BOSS TRADING LLC connects businesses and customers with electronics sourcing solutions from international markets. Based in Dubai, we support wholesale, bulk, individual and mixed-grade enquiries.
                     </p>
-
                     <div class="buttons">
-                        <a href="products.html"
-                           class="button button-gold">
-                            EXPLORE PRODUCTS →
-                        </a>
-
-                        <a href="https://wa.me/971522740627"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="button button-outline">
-                            CONTACT US
-                        </a>
+                        <a href="products.html" class="button button-gold">EXPLORE PRODUCTS →</a>
+                        <a href="https://wa.me/971522740627" target="_blank" rel="noopener noreferrer" class="button button-outline">CONTACT US</a>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- TRUST STRIP -->
-
         <div class="trust-strip">
             <div class="container trust-grid">
-
-                <div class="trust-item">
-                    <strong>GLOBAL SOURCING</strong>
-                    <span>International markets</span>
-                </div>
-
-                <div class="trust-item">
-                    <strong>FLEXIBLE ENQUIRIES</strong>
-                    <span>Individual to bulk</span>
-                </div>
-
-                <div class="trust-item">
-                    <strong>PRODUCT VARIETY</strong>
-                    <span>Multiple electronics categories</span>
-                </div>
-
-                <div class="trust-item">
-                    <strong>DUBAI, UAE</strong>
-                    <span>Local business presence</span>
-                </div>
-
+                <div class="trust-item"><strong>GLOBAL SOURCING</strong><span>International markets</span></div>
+                <div class="trust-item"><strong>FLEXIBLE ENQUIRIES</strong><span>Individual to bulk</span></div>
+                <div class="trust-item"><strong>PRODUCT VARIETY</strong><span>Multiple electronics categories</span></div>
+                <div class="trust-item"><strong>DUBAI, UAE</strong><span>Local business presence</span></div>
             </div>
         </div>
 
-        <!-- ABOUT -->
-
         <section id="about">
             <div class="container about-grid">
-
                 <div class="about-copy">
                     <p class="eyebrow">Who We Are</p>
-
                     <div class="section-heading">
-                        <h2>
-                            Electronics Trading,
-                            <span>Built Around Your Needs.</span>
-                        </h2>
-
-                        <p>
-                            Your requirements. Our sourcing network.
-                            One point of contact.
-                        </p>
+                        <h2>Electronics Trading,<span>Built Around Your Needs.</span></h2>
+                        <p>Your requirements. Our sourcing network. One point of contact.</p>
                     </div>
-
-                    <p>
-                        ONE BOSS TRADING LLC is an electronics trading
-                        company based in Deira, Dubai, United Arab Emirates.
-                        We help customers explore electronics products
-                        across multiple categories and international
-                        sourcing markets.
-                    </p>
-
-                    <p>
-                        Whether you are enquiring about a single product,
-                        a bulk requirement or mixed-grade electronics,
-                        our team can discuss your needs and check
-                        current availability.
-                    </p>
-
-                    <p>
-                        Product availability, condition, specifications
-                        and pricing are confirmed individually at the
-                        time of enquiry.
-                    </p>
-
-                    <a href="products.html"
-                       class="button button-gold">
-                        VIEW OUR CATEGORIES →
-                    </a>
+                    <p>ONE BOSS TRADING LLC is an electronics trading company based in Deira, Dubai, United Arab Emirates. We help customers explore electronics products across multiple categories and international sourcing markets.</p>
+                    <p>Whether you are enquiring about a single product, a bulk requirement or mixed-grade electronics, our team can discuss your needs and check current availability.</p>
+                    <p>Product availability, condition, specifications and pricing are confirmed individually at the time of enquiry.</p>
+                    <a href="products.html" class="button button-gold">VIEW OUR CATEGORIES →</a>
                 </div>
 
                 <div class="about-panel">
                     <h3>What We Offer</h3>
-
                     <ul>
                         <li><span class="check">✦</span> Electronics wholesale enquiries</li>
                         <li><span class="check">✦</span> Bulk sourcing requirements</li>
@@ -700,220 +607,104 @@
                         <li><span class="check">✦</span> International sourcing requests</li>
                     </ul>
                 </div>
-
             </div>
         </section>
-
-        <!-- SERVICES -->
 
         <section class="services-section" id="services">
             <div class="container">
-
                 <div class="section-heading">
                     <p class="eyebrow">Our Services</p>
-
-                    <h2>
-                        Flexible Solutions for
-                        <span>Different Requirements.</span>
-                    </h2>
-
-                    <p>
-                        Tell us what you need. We can discuss your
-                        requirements and check available options.
-                    </p>
+                    <h2>Flexible Solutions for<span>Different Requirements.</span></h2>
+                    <p>Tell us what you need. We can discuss your requirements and check available options.</p>
                 </div>
-
                 <div class="service-grid">
-
                     <article class="service-card">
                         <p class="service-number">01 / WHOLESALE</p>
                         <h3>Wholesale Trading</h3>
-                        <p>
-                            Enquire about electronics requirements
-                            for your business and resale operations.
-                        </p>
+                        <p>Enquire about electronics requirements for your business and resale operations.</p>
                     </article>
-
                     <article class="service-card">
                         <p class="service-number">02 / BULK</p>
                         <h3>Bulk Requirements</h3>
-                        <p>
-                            Discuss larger quantity requirements
-                            and sourcing possibilities.
-                        </p>
+                        <p>Discuss larger quantity requirements and sourcing possibilities.</p>
                     </article>
-
                     <article class="service-card">
                         <p class="service-number">03 / INDIVIDUAL</p>
                         <h3>Individual Enquiries</h3>
-                        <p>
-                            Ask about individual products and
-                            their current availability.
-                        </p>
+                        <p>Ask about individual products and their current availability.</p>
                     </article>
-
                     <article class="service-card">
                         <p class="service-number">04 / BUY BACK</p>
                         <h3>Buy-Back Enquiries</h3>
-                        <p>
-                            Contact us to discuss electronics
-                            buy-back requirements.
-                        </p>
+                        <p>Contact us to discuss electronics buy-back requirements.</p>
                     </article>
-
                     <article class="service-card">
                         <p class="service-number">05 / MIXED GRADE</p>
                         <h3>Mixed-Grade Electronics</h3>
-                        <p>
-                            Enquire about mixed-grade requirements,
-                            subject to the available stock.
-                        </p>
+                        <p>Enquire about mixed-grade requirements, subject to the available stock.</p>
                     </article>
-
                     <article class="service-card">
                         <p class="service-number">06 / SOURCING</p>
                         <h3>Global Sourcing</h3>
-                        <p>
-                            Share your product requirements for
-                            sourcing enquiries across international
-                            markets.
-                        </p>
+                        <p>Share your product requirements for sourcing enquiries across international markets.</p>
                     </article>
-
                 </div>
             </div>
         </section>
-
-        <!-- SOURCING -->
 
         <section id="sourcing">
             <div class="container">
-
                 <div class="section-heading">
                     <p class="eyebrow">International Reach</p>
-
-                    <h2>
-                        Connecting Markets.
-                        <span>Expanding Possibilities.</span>
-                    </h2>
-
-                    <p>
-                        We work with sourcing requirements connected
-                        to markets across the following regions.
-                    </p>
+                    <h2>Connecting Markets.<span>Expanding Possibilities.</span></h2>
+                    <p>We work with sourcing requirements connected to markets across the following regions.</p>
                 </div>
-
                 <div class="sourcing-grid">
-
-                    <div class="source-card">
-                        <h3>USA</h3>
-                        <p>North American sourcing</p>
-                    </div>
-
-                    <div class="source-card">
-                        <h3>Hong Kong</h3>
-                        <p>Asian sourcing</p>
-                    </div>
-
-                    <div class="source-card">
-                        <h3>United Kingdom</h3>
-                        <p>UK market sourcing</p>
-                    </div>
-
-                    <div class="source-card">
-                        <h3>Europe</h3>
-                        <p>European sourcing</p>
-                    </div>
-
+                    <div class="source-card"><h3>USA</h3><p>North American sourcing</p></div>
+                    <div class="source-card"><h3>Hong Kong</h3><p>Asian sourcing</p></div>
+                    <div class="source-card"><h3>United Kingdom</h3><p>UK market sourcing</p></div>
+                    <div class="source-card"><h3>Europe</h3><p>European sourcing</p></div>
                 </div>
             </div>
         </section>
-
-        <!-- CALL TO ACTION -->
 
         <section class="cta">
             <div class="container">
-
                 <p class="eyebrow">Let's Discuss Your Requirements</p>
-
-                <h2>
-                    Looking for Electronics?
-                    <span>Let's Connect.</span>
-                </h2>
-
-                <p>
-                    Contact ONE BOSS TRADING LLC with your product,
-                    quantity and sourcing requirements. Availability
-                    and pricing are confirmed upon enquiry.
-                </p>
-
+                <h2>Looking for Electronics?<span>Let's Connect.</span></h2>
+                <p>Contact ONE BOSS TRADING LLC with your product, quantity and sourcing requirements. Availability and pricing are confirmed upon enquiry.</p>
                 <div class="buttons">
-                    <a href="products.html"
-                       class="button button-gold">
-                        EXPLORE PRODUCTS →
-                    </a>
-
-                    <a href="https://wa.me/971522740627"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="button button-outline">
-                        CHAT ON WHATSAPP
-                    </a>
+                    <a href="products.html" class="button button-gold">EXPLORE PRODUCTS →</a>
+                    <a href="https://wa.me/971522740627" target="_blank" rel="noopener noreferrer" class="button button-outline">CHAT ON WHATSAPP</a>
                 </div>
-
             </div>
         </section>
 
-        <!-- CONTACT -->
-
         <section id="contact">
             <div class="container">
-
                 <div class="section-heading">
                     <p class="eyebrow">Get In Touch</p>
-
-                    <h2>
-                        Contact <span>ONE BOSS.</span>
-                    </h2>
-
-                    <p>
-                        Reach out to discuss your electronics
-                        requirements or arrange an enquiry.
-                    </p>
+                    <h2>Contact <span>ONE BOSS.</span></h2>
+                    <p>Reach out to discuss your electronics requirements or arrange an enquiry.</p>
                 </div>
-
                 <div class="contact-grid">
-
                     <div class="contact-card">
                         <h3>BUSINESS ADDRESS</h3>
-                        <p>
-                            Shop 11, Ground Floor, Building 18B Street,
-                            Al Murar, Deira, Dubai, United Arab Emirates
-                        </p>
+                        <p>Shop 11, Ground Floor, Building 18B Street, Al Murar, Deira, Dubai, United Arab Emirates</p>
                         <br>
-                        <a href="https://maps.app.goo.gl/Mv9ScazLX6xoMcNw7"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GET DIRECTIONS →
-                        </a>
+                        <a href="https://maps.app.goo.gl/Mv9ScazLX6xoMcNw7" target="_blank" rel="noopener noreferrer">GET DIRECTIONS →</a>
                     </div>
 
                     <div class="contact-card">
                         <h3>WHATSAPP & PHONE</h3>
                         <p>+971 52 274 0627</p>
                         <br>
-                        <a href="https://wa.me/971522740627"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            START A WHATSAPP ENQUIRY →
-                        </a>
+                        <a href="https://wa.me/971522740627" target="_blank" rel="noopener noreferrer">START A WHATSAPP ENQUIRY →</a>
                     </div>
 
                     <div class="contact-card">
                         <h3>EMAIL</h3>
-                        <a href="mailto:onebossllc1981@gmail.com">
-                            onebossllc1981@gmail.com
-                        </a>
+                        <a href="mailto:onebossllc1981@gmail.com">onebossllc1981@gmail.com</a>
                     </div>
 
                     <div class="contact-card">
@@ -921,35 +712,22 @@
                         <p>Daily: 11:00 AM – 10:00 PM</p>
                         <p>Dubai, United Arab Emirates</p>
                     </div>
-
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-
     <footer>
         <div class="container footer-content">
-
-            <div class="footer-brand">
-                ONE BOSS TRADING LLC
-            </div>
-
-            <p>
-                © <span id="year"></span> ONE BOSS TRADING LLC.
-                All rights reserved.
-            </p>
-
+            <div class="footer-brand">ONE BOSS TRADING LLC</div>
             <p>Dubai, United Arab Emirates</p>
-
+            <p>© <span id="year"></span> ONE BOSS TRADING LLC. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
 </body>
