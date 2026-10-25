@@ -1,807 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#090909">
-    <meta name="description" content="Explore phones, tablets, computers and accessories available through ONE BOSS TRADING LLC in Dubai, UAE.">
-    <title>Products | ONE BOSS TRADING LLC</title>
-    <style>
-        :root {
-            --black: #090909;
-            --panel: #151515;
-            --gold: #d4af37;
-            --white: #ffffff;
-            --muted: #b7b7b7;
-            --border: #303030;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | ONE BOSS TRADING LLC</title>
+  <style>
+    :root {
+      --black: #090909;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --muted: #b7b7b7;
+      --panel: #151515;
+      --border: #303030;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, 92%); margin: 0 auto; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    header {
+      background: #101010;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 15px 0;
+    }
 
-        body {
-            background: var(--black);
-            color: var(--white);
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .brand-text strong {
+      color: var(--gold);
+      font-size: 1.35rem;
+      letter-spacing: 2px;
+    }
+    .brand-text span {
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      color: var(--white);
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    .site-logo {
+      width: clamp(72px, 10vw, 120px);
+      height: auto;
+      display: block;
+      margin-left: auto;
+      filter: drop-shadow(0 8px 18px rgba(212, 175, 55, 0.2));
+    }
 
-        .container {
-            width: min(1160px, 92%);
-            margin: auto;
-        }
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    nav a { font-size: 0.95rem; }
+    nav a:hover, nav a.active { color: var(--gold); }
 
-        header {
-            background: #101010;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+    .hero {
+      padding: 75px 0 60px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #292211 0%, #090909 65%);
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      margin: 14px 0;
+    }
+    .hero p { color: var(--muted); max-width: 680px; margin: auto; }
 
-        .navbar {
-            min-height: 76px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 15px 0;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.25;
-        }
-
-        .brand-text strong {
-            color: var(--gold);
-            font-size: 1.35rem;
-            letter-spacing: 2px;
-        }
-
-        .brand-text span {
-            font-size: 0.76rem;
-            letter-spacing: 3px;
-            color: var(--white);
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: var(--gold);
-        }
-
-        .site-logo {
-            width: clamp(110px, 11vw, 170px);
-            height: auto;
-            display: block;
-            margin-left: auto;
-            filter: drop-shadow(0 8px 18px rgba(212, 175, 55, 0.2));
-        }
-
-        .hero {
-            padding: 75px 0 60px;
-            text-align: center;
-            background: radial-gradient(ellipse at top, #292211 0%, #090909 65%);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .eyebrow {
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
-            line-height: 1.2;
-            margin: 14px 0;
-        }
-
-        .hero p {
-            max-width: 690px;
-            margin: auto;
-            color: var(--muted);
-        }
-
-        .gold {
-            color: var(--gold);
-        }
-
-        .hero-buttons {
-            margin-top: 28px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 22px;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: 0.2s;
-            text-align: center;
-        }
-
-        .button-gold {
-            background: var(--gold);
-            color: #090909;
-        }
-
-        .button-gold:hover {
-            background: #f0d36b;
-            transform: translateY(-2px);
-        }
-
-        .button-outline {
-            border: 1px solid var(--gold);
-            color: var(--gold);
-        }
-
-        .button-outline:hover {
-            background: var(--gold);
-            color: var(--black);
-        }
-
-        .category-nav {
-            padding: 24px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .category-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .category-links a {
-            border: 1px solid var(--border);
-            border-radius: 30px;
-            padding: 8px 17px;
-            font-size: 0.9rem;
-        }
-
-        .category-links a:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-
-        .products-section {
-            padding: 65px 0;
-            scroll-margin-top: 95px;
-        }
-
-        .section-heading {
-            margin-bottom: 28px;
-        }
-
-        .section-heading h2 {
-            font-size: 2rem;
-            margin-bottom: 5px;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            background: var(--panel);
-            border: 1px solid var(--border);
-            border-radius: 9px;
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-        }
-
-        .product-visual {
-            height: 155px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(145deg, #242424, #101010);
-            border-bottom: 1px solid var(--border);
-            padding: 20px;
-        }
-
-        .product-visual svg {
-            width: 90px;
-            height: 90px;
-            stroke: var(--gold);
-            fill: none;
-            stroke-width: 1.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .product-info {
-            padding: 19px;
-        }
-
-        .product-info h3 {
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-        }
-
-        .product-info p {
-            font-size: 0.9rem;
-            color: var(--muted);
-            min-height: 66px;
-            margin-bottom: 17px;
-        }
-
-        .product-info .button {
-            width: 100%;
-            padding: 10px 12px;
-            font-size: 0.88rem;
-        }
-
-        .availability {
-            padding: 30px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            text-align: center;
-            background: #101010;
-        }
-
-        .availability p {
-            color: var(--muted);
-            margin-top: 5px;
-        }
-
-        .contact-section {
-            padding: 65px 0;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-
-        .contact-section p {
-            max-width: 650px;
-            margin: 0 auto 22px;
-            color: var(--muted);
-        }
-
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 30px 0;
-            background: #101010;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-name {
-            color: var(--gold);
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .footer-content p,
-        .footer-content a {
-            color: var(--muted);
-            font-size: 0.88rem;
-        }
-
-        .footer-content a:hover {
-            color: var(--gold);
-        }
-
-        @media (max-width: 900px) {
-            .product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 560px) {
-            .navbar {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav {
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .hero {
-                padding: 55px 0 45px;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .product-visual {
-                height: 135px;
-            }
-
-            .product-info p {
-                min-height: auto;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .site-logo {
-                width: min(100%, 160px);
-                margin-left: 0;
-            }
-        }
-    </style>
+    @media (max-width: 560px) {
+      .navbar {
+        justify-content: center;
+        text-align: center;
+      }
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+      .site-logo {
+        width: 90px;
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
+  <header>
     <div class="container navbar">
-        <a href="index.html" class="brand-text" aria-label="ONE BOSS TRADING LLC Home">
-            <strong>ONE BOSS</strong>
-            <span>TRADING LLC</span>
-        </a>
+      <a href="index.html" class="brand-text" aria-label="ONE BOSS TRADING LLC Home">
+        <strong>ONE BOSS</strong>
+        <span>TRADING LLC</span>
+      </a>
 
-        <img class="site-logo" src="assets/logo.svg" alt="ONE BOSS TRADING LLC logo">
+      <img class="site-logo" src="logo.png.png" alt="ONE BOSS TRADING LLC logo" />
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<main>
-
+  <main>
     <section class="hero">
-        <div class="container">
-            <span class="eyebrow">Quality • Value • Trust</span>
-            <h1>Explore Our <span class="gold">Products</span></h1>
-            <p>
-                Discover phones, tablets, computers and electronic accessories sourced for wholesale, bulk and individual enquiries.
-                Contact our team to check availability and request a quotation.
-            </p>
-
-            <div class="hero-buttons">
-                <a class="button button-gold"
-                   href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
-                   target="_blank" rel="noopener noreferrer">
-                    Enquire on WhatsApp
-                </a>
-
-                <a class="button button-outline" href="#phones">
-                    Browse Products
-                </a>
-            </div>
-        </div>
+      <div class="container">
+        <span class="eyebrow">Quality • Value • Trust</span>
+        <h1>Explore Our <span style="color: var(--gold);">Products</span></h1>
+        <p>Discover phones, tablets, computers and accessories tailored for wholesale, bulk, and individual enquiries.</p>
+      </div>
     </section>
-
-    <section class="category-nav" aria-label="Product categories">
-        <div class="container category-links">
-            <a href="#phones">Mobile Phones</a>
-            <a href="#tablets">Tablets</a>
-            <a href="#computers">Computers</a>
-            <a href="#accessories">Accessories</a>
-        </div>
-    </section>
-
-    <section class="products-section container" id="phones">
-        <div class="section-heading">
-            <h2>Mobile <span class="gold">Phones</span></h2>
-            <p>Explore popular smartphone brands.</p>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="28" y="8" width="44" height="84" rx="8"/>
-                        <line x1="42" y1="17" x2="58" y2="17"/>
-                        <circle cx="50" cy="81" r="3"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Apple iPhone</h3>
-                    <p>Explore iPhone models and enquire about available grades and configurations.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Apple%20iPhones.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="28" y="8" width="44" height="84" rx="9"/>
-                        <circle cx="50" cy="19" r="3"/>
-                        <line x1="42" y1="82" x2="58" y2="82"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Samsung Galaxy</h3>
-                    <p>Ask about Samsung Galaxy smartphones, model options and bulk quantities.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Samsung%20phones.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="28" y="8" width="44" height="84" rx="8"/>
-                        <circle cx="50" cy="19" r="4"/>
-                        <circle cx="50" cy="81" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Google Pixel</h3>
-                    <p>Enquire about Google Pixel devices and current stock availability.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Google%20Pixel%20phones.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="28" y="8" width="44" height="84" rx="8"/>
-                        <rect x="34" y="17" width="32" height="59" rx="3"/>
-                        <circle cx="50" cy="84" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Motorola</h3>
-                    <p>Contact us for Motorola smartphone enquiries and available quantities.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Motorola%20phones.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="products-section container" id="tablets">
-        <div class="section-heading">
-            <h2><span class="gold">Tablets</span></h2>
-            <p>Tablet options for work, study and everyday use.</p>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="14" y="12" width="72" height="76" rx="7"/>
-                        <circle cx="50" cy="81" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Apple iPad</h3>
-                    <p>Enquire about iPad models, storage options and available quantities.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Apple%20iPads.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="14" y="12" width="72" height="76" rx="5"/>
-                        <circle cx="50" cy="81" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Samsung Tablets</h3>
-                    <p>Ask about Samsung tablet models and current availability.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Samsung%20tablets.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="14" y="12" width="72" height="76" rx="6"/>
-                        <circle cx="50" cy="81" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Lenovo Tablets</h3>
-                    <p>Contact us to discuss Lenovo tablet options and bulk enquiries.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Lenovo%20tablets.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="14" y="12" width="72" height="76" rx="6"/>
-                        <circle cx="50" cy="81" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Xiaomi Tablets</h3>
-                    <p>Enquire about Xiaomi tablets and available models.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Xiaomi%20tablets.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="products-section container" id="computers">
-        <div class="section-heading">
-            <h2>Computers &amp; <span class="gold">Laptops</span></h2>
-            <p>Computer solutions for businesses and individual customers.</p>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="15" y="13" width="70" height="53" rx="3"/>
-                        <line x1="50" y1="66" x2="50" y2="80"/>
-                        <line x1="35" y1="81" x2="65" y2="81"/>
-                        <line x1="9" y1="87" x2="91" y2="87"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Dell Computers</h3>
-                    <p>Enquire about Dell laptops, desktops and business computer options.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Dell%20computers.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="15" y="13" width="70" height="53" rx="3"/>
-                        <line x1="50" y1="66" x2="50" y2="80"/>
-                        <line x1="35" y1="81" x2="65" y2="81"/>
-                        <line x1="9" y1="87" x2="91" y2="87"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>HP Computers</h3>
-                    <p>Ask about HP laptops, desktops and available business configurations.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20HP%20computers.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="15" y="13" width="70" height="53" rx="3"/>
-                        <line x1="50" y1="66" x2="50" y2="80"/>
-                        <line x1="35" y1="81" x2="65" y2="81"/>
-                        <line x1="9" y1="87" x2="91" y2="87"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Lenovo Computers</h3>
-                    <p>Enquire about Lenovo laptops and other computer products.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Lenovo%20computers.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="15" y="10" width="70" height="59" rx="4"/>
-                        <line x1="7" y1="82" x2="93" y2="82"/>
-                        <path d="M15 69 L7 82 M85 69 L93 82"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Apple MacBooks</h3>
-                    <p>Ask about MacBook laptops, model availability and quantities.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20Apple%20MacBooks.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="products-section container" id="accessories">
-        <div class="section-heading">
-            <h2>Electronic <span class="gold">Accessories</span></h2>
-            <p>Useful accessories for devices, offices and business customers.</p>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="10" y="15" width="80" height="54" rx="5"/>
-                        <rect x="19" y="24" width="62" height="36" rx="2"/>
-                        <path d="M38 69 L33 85 M62 69 L67 85 M33 85 L67 85"/>
-                        <circle cx="50" cy="75" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Docking Stations</h3>
-                    <p>Enquire about docking stations and connectivity solutions for your setup.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20docking%20stations.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <path d="M27 23 L27 40 Q27 49 37 49 L48 49 Q58 49 58 59 L58 71"/>
-                        <path d="M20 14 L34 14 L34 27 L20 27 Z"/>
-                        <path d="M48 71 L68 71 L68 84 L48 84 Z"/>
-                        <path d="M68 77 L82 77"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Cables &amp; Wires</h3>
-                    <p>Ask about charging cables, data cables and connectivity accessories.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20cables%20and%20wires.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="29" y="7" width="42" height="86" rx="8"/>
-                        <rect x="34" y="15" width="32" height="65" rx="4"/>
-                        <circle cx="50" cy="86" r="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Cases &amp; Covers</h3>
-                    <p>Enquire about protective cases and covers for compatible devices.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20device%20cases%20and%20covers.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <div class="product-visual" aria-hidden="true">
-                    <svg viewBox="0 0 100 100">
-                        <rect x="27" y="28" width="46" height="49" rx="5"/>
-                        <line x1="39" y1="20" x2="39" y2="28"/>
-                        <line x1="61" y1="20" x2="61" y2="28"/>
-                        <path d="M50 77 L50 85 Q50 91 59 91 L69 91"/>
-                        <rect x="69" y="86" width="9" height="10" rx="2"/>
-                    </svg>
-                </div>
-                <div class="product-info">
-                    <h3>Chargers &amp; Adapters</h3>
-                    <p>Contact us about power adapters, charging accessories and compatibility.</p>
-                    <a class="button button-outline" target="_blank" rel="noopener noreferrer"
-                       href="https://wa.me/971522740627?text=Hello%2C%20I%20am%20interested%20in%20chargers%20and%20adapters.">
-                        Enquire Now
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="availability">
-        <div class="container">
-            <h2>Looking for a Specific Product?</h2>
-            <p>Product availability, models, grades and quantities may vary. Contact us for current stock and pricing.</p>
-        </div>
-    </section>
-
-    <section class="contact-section container" id="contact">
-        <h2>Let's Discuss Your <span class="gold">Requirements</span></h2>
-        <p>
-            Whether you are buying individual products or sourcing in bulk,
-            contact ONE BOSS TRADING LLC for enquiries and quotations.
-        </p>
-
-        <div class="hero-buttons">
-            <a class="button button-gold"
-               href="https://wa.me/971522740627?text=Hello%20ONE%20BOSS%20TRADING%20LLC%2C%20I%20would%20like%20to%20discuss%20a%20product%20enquiry."
-               target="_blank" rel="noopener noreferrer">
-                WhatsApp: +971 52 274 0627
-            </a>
-
-            <a class="button button-outline"
-               href="mailto:onebossllc1981@gmail.com">
-                Email Us
-            </a>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="container footer-content">
-        <div>
-            <div class="footer-name">ONE BOSS TRADING LLC</div>
-            <p>Electronics trading • Dubai, United Arab Emirates</p>
-        </div>
-
-        <p>
-            <a href="index.html">Home</a>
-            &nbsp; | &nbsp;
-            <a href="products.html">Products</a>
-            &nbsp; | &nbsp;
-            <a href="#contact">Contact</a>
-        </p>
-
-        <p>&copy; 2026 ONE BOSS TRADING LLC. All rights reserved.</p>
-    </div>
-</footer>
-
+  </main>
 </body>
 </html>
